@@ -327,6 +327,13 @@ var/list/uplink_items = list()
 	cost = 12
 	job = list("Geneticist", "Chief Medical Officer")
 
+/datum/uplink_item/jobspecific/syngendisk
+	name = "Disabilities Disk"
+	desc = "A disk with all disabilities isolated. Allows syndicate agents to more quickly research genetic abilities that may aid their cause. This instrument may also be used to disable targets by crippling them with every disability under the sun."
+	item = /obj/item/weapon/disk/data/syngendisk
+	cost = 10
+	job = list("Geneticist", "Chief Medical Officer")
+
 //Atmospheric Technician
 /datum/uplink_item/jobspecific/flaregun
 	name = "Modified Flaregun"

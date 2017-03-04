@@ -124,6 +124,47 @@
 	buf.dna.SE=new_SE
 	buf.dna.SetSEValueRange(MONKEYBLOCK,0xDAC, 0xFFF)
 
+/obj/item/weapon/disk/data/syngendisk
+	name = "data disk - 'Suspicious Cloning Data Disk'"
+	read_only = 1
+
+/obj/item/weapon/disk/data/syngendisk/New()
+	..()
+	Initialize()
+	buf.types=DNA2_BUF_SE
+	var/list/new_SE=list(0x098,0x3E8,0x403,0x44C,0x39F,0x4B0,0x59D,0x514,0x5FC,0x578,0x5DC,0x640,0x6A4)
+	for(var/i=new_SE.len;i<=DNA_SE_LENGTH;i++)
+		new_SE += rand(1,1024)
+	buf.dna.SE=new_SE
+	buf.dna.SetSEValueRange(BLINDBLOCK,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(DEAFBLOCK,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(MUTEBLOCK,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(CLUMSYBLOCK ,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(COUGHBLOCK ,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(EPILEPSYBLOCK,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(GLASSESBLOCK ,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(TWITCHBLOCK,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(NERVOUSBLOCK,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(HALLUCINATIONBLOCK,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(LISPBLOCK,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(RADBLOCK ,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(FATBLOCK,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(CHAVBLOCK,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(SCRAMBLEBLOCK,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(TOXICFARTBLOCK,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(SWEDEBLOCK ,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(HORNSBLOCK ,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(SMILEBLOCK,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(ELVISBLOCK,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(IMMOLATEBLOCK,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(LOUDBLOCK ,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(WHISPERBLOCK,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(SANSBLOCK,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(NOIRBLOCK ,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(HEADACHEBLOCK,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(DIZZYBLOCK,0xDAC, 0xFFF)
+	buf.dna.SetSEValueRange(NERVOUSBLOCK,0xDAC, 0xFFF)
+
 
 //Find a dead mob with a brain and client.
 /proc/find_dead_player(var/find_key)
